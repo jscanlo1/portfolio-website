@@ -1,5 +1,5 @@
 import NavBar from './navbar';
-import {inter, playfair_display} from '../pages/fonts';
+import {inter, playfair_display} from './fonts';
 
 
 export default function Layout({ children}) {
