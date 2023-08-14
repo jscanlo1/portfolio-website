@@ -1,9 +1,15 @@
 import Content from '@/components/content';
 import PageTitle from '@/components/page-title';
+import Head from 'next/head';
 
 export default function aboutMe() {
     return(
         <div>
+            <Head>
+                <title>
+                    About Me
+                </title>
+            </Head>
             <PageTitle>About Me</PageTitle>
 
             <Content> 

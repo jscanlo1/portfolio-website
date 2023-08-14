@@ -2,10 +2,16 @@ import PageTitle from "@/components/page-title";
 import SubHeadingSM from "@/components/sub-heading-sm";
 import Date from "@/components/date";
 import { getProjectData, getAllProjectIds } from "@/lib/project-helper";
+import Head from "next/head";
 
 export default function Project({ projectData }){
     return (
+      <>
+        <Head>
+          <title>{ projectData.title }</title>
+        </Head>
         <article>
+
             <PageTitle> { projectData.title } </PageTitle>
             <SubHeadingSM> <Date dateString={projectData.date} /> </SubHeadingSM>
 
@@ -13,6 +19,7 @@ export default function Project({ projectData }){
             <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
 
         </article>
+      </>
     )
 }
 

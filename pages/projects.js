@@ -5,11 +5,15 @@ import SubHeadingSM from '@/components/sub-heading-sm';
 import { getSortedProjectData } from '@/lib/project-helper';
 import Date from '@/components/date';
 import Content from '@/components/content';
+import Head from 'next/head';
 
 
 export default function projects({ allProjectData }) {
     return(
         <>
+            <Head>
+                <title>My Projects</title>
+            </Head>
             <PageTitle>My Projects</PageTitle>
             <SubHeading>A non-exhaustive list of some my personal projects!</SubHeading>
 
