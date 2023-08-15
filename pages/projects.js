@@ -20,7 +20,7 @@ export default function projects({ allProjectData }) {
             <Content>
                 <section className='content-center mx-auto'>
                     <ul className='mx-auto'>
-                        {allProjectData.map(({id, title, date, description, github}) => (
+                        {allProjectData.map(({id, title, date, description, github, favourite}) => (
                             <li  key={id} className=''>
                                 <div className='grid grid-cols-1 md:grid-cols-2 p-4 border-dotted border-b-2 border-zinc-400'>
                                     <div className='h-fill p-2 border-dotted md:border-r-2 border-zinc-400'>

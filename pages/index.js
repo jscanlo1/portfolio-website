@@ -2,38 +2,65 @@ import Head from 'next/head';
 import PageTitle from '@/components/page-title';
 import SubHeadingSM from '@/components/sub-heading-sm';
 import Content from '@/components/content';
+import { getFavouriteProjects } from '@/lib/project-helper';
+import Link from 'next/link';
 
 
-export default function Home() {
+
+export default function Home( {favouriteProjects} ) {
   return (
 
-      <div >
+      <>
         <Head>
           <title>Portfolio Homepage</title>
         </Head>
-        <PageTitle >
-          My Portfolio
-        </PageTitle>
+
+        <div className='mt-20'>
+          <PageTitle >
+            Welcome!
+          </PageTitle>
+        </div>
 
         <SubHeadingSM>
-          by Johnny Scanlon
+          Maintained by Johnny Scanlon
         </SubHeadingSM>
 
-        <Content>
-          This website serves as a portfolio for some of the work I've done, along with some hobby projects. 
-          As well, I often use it as a testing ground of sorts for any web dev projects I have. Feel free to have a look around!
-        </Content>
+        <div className='w-4/5 md:w-3/5 mx-auto'>
+          <p className='py-2'>
+            This is a personal website that mostly works as a portfolio for some hobby projects.
+          </p>
 
-        <Content>
-          If you'd like to read about myself in more detail please consult the about me section. 
-          A brief personal description is writen there, along with links to LinkedIn etc....
-        </Content>
+          <p className='py-2'>
+            I also sometimes use this site as a testing ground for some of my web dev hobby projects, so please feel free to have a look around!
+          </p>
 
-        <Content>
-          If you'd like to explore some of the projects I've done, please check out the porjects section! 
-          Please keep in mind this may not be an exhaustive list and others may be present on my GitHub (link in about me section).
-        </Content>
-      </div>
+          <div className='pt-4'>
+            <p className='underline'><em>Highlights</em></p>
+            
+            <div className='mt-2 border-dotted border-y-2 border-zinc-400 flex flex-1 space-x-4 justify-start min-h-32 overflow-x-auto'>
+              {favouriteProjects.map(({id, title, date, description, github, favourite}) => {
+                return(
+                  <div className='min-h-32 basis-1/2 shrink-0 grow-0 p-4'> 
+                    <Link className='font-bold' href={`/projects/${id}`}>{title}</Link>
+                    <p className='text-sm text-zinc-700'>{date}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+
+      </>
       
   )
 }
+
+export async function getStaticProps(){
+  const favouriteProjects = getFavouriteProjects();
+  return{
+    props:{
+      favouriteProjects,
+    }
+  }
+}
+

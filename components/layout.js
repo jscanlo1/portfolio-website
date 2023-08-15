@@ -4,10 +4,10 @@ import {inter, playfair_display} from './fonts';
 
 export default function Layout({ children}) {
     return (
-        <div  className={`${playfair_display.variable} font-serif text-zinc-950  flex flex-col h-screen`}>
+        <div  className={`${playfair_display.variable} font-serif text-zinc-950  flex flex-col h-screen bg-zinc-200 bg-[url('../public/noise.png')]`}>
 
             <NavBar></NavBar>
-            <main className={`flex-grow flex flex-col overflow-auto px-8 bg-zinc-200 bg-[url('../public/noise.png')]`}>
+            <main className={`flex-grow flex flex-col overflow-auto px-8 `}>
                     {children}
             </main>
             
