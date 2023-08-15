@@ -3,6 +3,7 @@ title: 'Cryptographic Website'
 date: '2023-06-01'
 description: 'Personal roject to help teach myeslf about the diffie-helamann keys and other cryptographic concepts. Based on a project as part Alechemy Universities blockchain course.'
 github: 'https://github.com/jscanlo1'
+favourite: false
 ---
 
 This is is the code base behind this website.

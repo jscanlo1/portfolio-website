@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 const navigation = [
   { name: 'Home', href: '/'},
-  //{ name: 'My Synth', href: '#'},
+  { name: 'Synth', href: '/synth'},
   { name: 'Projects', href: '/projects'},
   { name: 'About Me', href: '/about-me'},
 ]
@@ -28,7 +28,7 @@ export default function NavBar() {
   const pathname = usePathname()
 
   return (
-    <Disclosure as="nav" className="bg-zinc-200">
+    <Disclosure as="nav" >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
