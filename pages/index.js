@@ -15,7 +15,7 @@ export default function Home( {favouriteProjects} ) {
           <title>Portfolio Homepage</title>
         </Head>
 
-        <div className='mt-20'>
+        <div className='mt-4'>
           <PageTitle >
             Welcome!
           </PageTitle>
@@ -40,7 +40,7 @@ export default function Home( {favouriteProjects} ) {
             <div className='mt-2 border-dotted border-y-2 border-zinc-400 flex flex-1 space-x-4 justify-start min-h-32 overflow-x-auto'>
               {favouriteProjects.map(({id, title, date, description, github, favourite}) => {
                 return(
-                  <div className='min-h-32 basis-1/2 shrink-0 grow-0 p-4'> 
+                  <div key={id} className='min-h-32 basis-2/5 shrink-0 grow-0 p-4'> 
                     <Link className='font-bold' href={`/projects/${id}`}>{title}</Link>
                     <p className='text-sm text-zinc-700'>{date}</p>
                   </div>
