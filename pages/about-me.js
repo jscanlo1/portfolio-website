@@ -8,6 +8,11 @@ const socials = [
     {name: 'LinkedIn', link: 'https://www.linkedin.com/in/johnny-scanlon-302419276/'},
 ]
 
+const resources = [
+    {name: 'thesis', src: '/thesis'},
+    {name: 'CV', src: '/cv'}
+]
+
 
 export default function aboutMe() {
     return(
@@ -47,6 +52,15 @@ export default function aboutMe() {
 
                 <div className='my-8'>
                     <p className='underline '><strong>Additional Resources</strong></p>
+                    <div className='flex flex-1 space-x-8 my-4'>
+
+                        {resources.map(({name, src}) => {
+                            return (
+                                <Link key={name}  href={src} ><strong>&bull; {name}</strong></Link>
+                            )
+                        })}
+
+                    </div>
                 </div>
             </div>
         </>

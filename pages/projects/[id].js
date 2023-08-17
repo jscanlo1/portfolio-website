@@ -14,9 +14,21 @@ export default function Project({ projectData }){
 
             <PageTitle> { projectData.title } </PageTitle>
             <SubHeadingSM> <Date dateString={projectData.date} /> </SubHeadingSM>
+            <div className=" flex justify-center justify-items-center ">
+              <div>
+                <a className='block font-bold' href={projectData.github} target="_blank"> - GitHub Repo -</a>
+              </div>
+              
+            </div>
+            
+            <div className='w-4/5 md:w-3/5 mx-auto'>
 
-            {/* Works but maybe come up with a more elegeant solution */}
-            <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+              {/* Works but maybe come up with a more elegeant solution */}
+              <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+
+            </div>
+
+            
 
         </article>
       </>
