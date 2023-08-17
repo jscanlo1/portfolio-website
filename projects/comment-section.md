@@ -6,6 +6,12 @@ github: 'https://github.com/jscanlo1'
 favourite: false
 ---
 
-This is is the code base behind this website.
 
-I built the website with **React** using **Next.js**. I used **Tailwind** to help with the styling of the website, as this is well supported by next.js.
+A project myself and a friend of mine undertook during a course on Machine Learning while we were in college.
+It went on to inspire the work I did in my thesis.
+
+The comment looks at using comment sections to judge the reliablity of a correponding news item!
+
+Selenium was used to scrape comment sections. 
+
+

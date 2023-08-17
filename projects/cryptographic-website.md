@@ -1,11 +1,19 @@
 ---
 title: 'Cryptographic Website'
 date: '2023-06-01'
-description: 'Personal roject to help teach myeslf about the diffie-helamann keys and other cryptographic concepts. Based on a project as part Alechemy Universities blockchain course.'
-github: 'https://github.com/jscanlo1'
+description: 'Personal project to help teach myeslf about the Diffie–Hellman keys and other cryptographic concepts. Based on a project as part Alechemy Universities blockchain course.'
+github: 'https://github.com/jscanlo1/cryptographic-ledger-website'
 favourite: false
 ---
 
-This is is the code base behind this website.
+This project uses **React** using **Vite** for the front end. I used **Express.js** and **Node.js** for the backend.
 
-I built the website with **React** using **Next.js**. I used **Tailwind** to help with the styling of the website, as this is well supported by next.js.
+The project uses the "ethereum-cryptography" npm package to generate public and private keys. 
+It also provides functions for hashing and converting utf-8 to bytes.
+
+The project solves the issue of 'double-spending', where correctly signed messages can be resent to re-trigger valid transactions, by making a time-stamp mandatory in all transactions. 
+This timestamp is then stored internally on the server. 
+It then rejects any messages that have a timestamp that has already been used along with the message hash. 
+Any change to the timestamp would need a different message hash.
+
+This is not dissimilar to the idea of nonces that blockchain technologies like Ethereum and Bitcoin use.
