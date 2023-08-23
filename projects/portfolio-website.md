@@ -6,6 +6,25 @@ github: 'https://github.com/jscanlo1'
 favourite: true
 ---
 
-This is is the code base behind this website.
+### Overview
 
-I built the website with **React** using **Next.js**. I used **Tailwind** to help with the styling of the website, as this is well supported by next.js.
+This is is the code repo behind this website.
+
+It started of as a side project to get to grips with react, from a platform to test out some web dev technolgies, to a portfolio website!
+
+I still use it occasionaly to try out new bits and piees, or try my hand at implementing something I thought looked cool on another website
+
+### How it works
+
+I built the website with **React.js** using **Next.js**. I used **Tailwind** to help with the styling of the website, as this is well supported by next.js.
+
+
+
+### 
+
+
+### Inspiration
+
+Hugely inspired by the layout of the blog [nan.fyi](https://www.nan.fyi). A great article on SVGs proved very influential!
+
+Also took some inpiration from the sites behind [tone.js](https://tonejs.github.io/) and [Fractured Air](https://fracturedair.wordpress.com/), to name but a few!

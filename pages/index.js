@@ -16,7 +16,7 @@ export default function Home( {favouriteProjects} ) {
           <title>Portfolio Homepage</title>
         </Head>
 
-        <div className='mt-4'>
+        <div>
           <PageTitle >
             Portfolio Website
           </PageTitle>
