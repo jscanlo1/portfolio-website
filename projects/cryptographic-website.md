@@ -6,6 +6,14 @@ github: 'https://github.com/jscanlo1/cryptographic-ledger-website'
 favourite: false
 ---
 
+### Overview
+
+The basis of this project is a project as part of the [Alchemy University](https://university.alchemy.com/) course on blockchain and ethereum development; a course I would certainly recommend to anyone interested in getting to grips with this technology as it starts from very first principles!
+
+The aim of the project was to build a simple website that kept track of user accounts and allowed them to securely send transactions to other acounts.
+
+### How it Works
+
 This project uses **React** using **Vite** for the front end. I used **Express.js** and **Node.js** for the backend.
 
 The project uses the "ethereum-cryptography" npm package to generate public and private keys. 

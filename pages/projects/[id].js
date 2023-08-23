@@ -3,6 +3,8 @@ import SubHeadingSM from "@/components/sub-heading-sm";
 import Date from "@/components/date";
 import { getProjectData, getAllProjectIds } from "@/lib/project-helper";
 import Head from "next/head";
+import Link from "next/link";
+import {FaGithub} from 'react-icons/fa';
 
 export default function Project({ projectData }){
     return (
@@ -12,25 +14,31 @@ export default function Project({ projectData }){
         </Head>
         <article>
 
-            <PageTitle> { projectData.title } </PageTitle>
-            <SubHeadingSM> <Date dateString={projectData.date} /> </SubHeadingSM>
-            <div className=" flex justify-center justify-items-center ">
-              <div>
-                <a className='block font-bold' href={projectData.github} target="_blank"> - GitHub Repo -</a>
-              </div>
-              
-            </div>
             
-            <div className='w-4/5 md:w-3/5 mx-auto'>
+            
+            
+            <div className='mx-auto font-sans prose-blockquote:border-l-zinc-400 prose lg:prose-l'>
+              <h1 className="font-serif">
+                {projectData.title }
+              </h1>
+
+              <p>
+                <Date dateString={projectData.date} /> 
+              </p>
+
+              <Link  href={projectData.github} target="_blank" className="text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                <FaGithub className='inline-block mb-1'/> GitHub Repo
+              </Link>
+
+              
 
               {/* Works but maybe come up with a more elegeant solution */}
-              <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+              <div className="" dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
 
             </div>
 
-            
-
         </article>
+        
       </>
     )
 }
