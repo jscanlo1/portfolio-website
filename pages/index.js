@@ -4,6 +4,7 @@ import SubHeadingSM from '@/components/sub-heading-sm';
 import { getFavouriteProjects } from '@/lib/project-helper';
 import Link from 'next/link';
 import Image from 'next/image'
+import {FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa';
 
 
 
@@ -25,24 +26,27 @@ export default function Home( {favouriteProjects} ) {
           by Johnny Scanlon
         </SubHeadingSM>
 
-        <div className='mx-auto rounded-full hidden md:block pt-8'>
+        <div className='mx-auto rounded-full pt-8'>
           <Image src='/profile-photo.jpg' width={250} height={250} alt='Profile Picture of Author' className='rounded-full' />
         </div>
 
         <div className='w-4/5 md:w-3/5 mx-auto'>
 
           <div className='flex flex-1 justify-evenly pt-12'>
-            <div className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>
-                <Link target='_blank' href='https://github.com/jscanlo1' ><strong> GitHub </strong></Link>
-            </div>
 
-            <div className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>
-                <Link target='_blank' href='https://www.linkedin.com/in/johnny-scanlon-302419276/' ><strong> LinkedIn </strong></Link>
-            </div>
-
-            <div className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>
-                <Link href='mailto:johnnyscanlon22@gmail.com' ><strong> Email </strong></Link>
-            </div>
+              <Link target='_blank' href='https://github.com/jscanlo1' className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-md font-medium' >
+                <FaGithub className='inline-block mb-1'/> <strong>GitHub </strong>
+              </Link>
+          
+              <Link target='_blank' href='https://www.linkedin.com/in/johnny-scanlon-302419276/' className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-md font-medium' >
+              <FaLinkedin className='inline-block mb-1'/><strong> LinkedIn </strong>
+              </Link>
+          
+          
+              <Link href='mailto:johnnyscanlon22@gmail.com' className='text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md px-3 py-2 text-md font-medium' >
+                <FaEnvelope className='inline-block mb-1' /><strong> Email </strong>
+              </Link>
+            
 
           </div>
 
