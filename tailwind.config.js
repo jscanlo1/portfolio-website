@@ -13,9 +13,9 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        serif: ['var(--font-playfair-display)'],
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-roboto-mono)'],
+        //serif: ['var(--font-playfair-display)', ...],
+        //sans: ['var(--font-inter)'],
+        //mono: ['var(--font-roboto-mono)'],
       },
     },
   },

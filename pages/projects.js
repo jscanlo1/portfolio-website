@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import PageTitle from '@/components/page-title';
 import SubHeading from '@/components/sub-heading';
-import SubHeadingSM from '@/components/sub-heading-sm';
 import { getSortedProjectData } from '@/lib/project-helper';
 import Date from '@/components/date';
 import Content from '@/components/content';
