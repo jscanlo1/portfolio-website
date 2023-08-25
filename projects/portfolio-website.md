@@ -1,7 +1,7 @@
 ---
 title: 'Portfolio Website'
 date: '2023-08-13'
-description: 'The code behind this Website! Developed using next.js'
+description: 'The repository behind this portfolio website. The website was built using React.js and Next.js.'
 github: 'https://github.com/jscanlo1'
 favourite: true
 ---
