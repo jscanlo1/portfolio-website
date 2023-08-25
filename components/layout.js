@@ -4,7 +4,7 @@ import NavBar from './navbar';
 
 export default function Layout({ children}) {
     return (
-        <div  className={` font-serif text-zinc-950  flex flex-col h-screen bg-zinc-200 bg-[url('../public/noise.png')]`}>
+        <div  className={` font-serif text-zinc-950  flex flex-col h-screen bg-zinc-200 bg-[url('/noise.png')]`}>
 
             <NavBar></NavBar>
             <main className={`flex-grow flex flex-col overflow-auto px-8 `}>
