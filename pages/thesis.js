@@ -1,4 +1,3 @@
-import Content from "@/components/content";
 import PageTitle from "@/components/page-title";
 
 

@@ -28,24 +28,27 @@ If interested, a link to my full thesis can be found at the bottom of the ***Abo
 ### How it Works
 
 
-This project looked at combining Bert, a (at the time) state-of-the-art transformer model, with emotion detection models.
+This project looked at combining Bert, a  state-of-the-art transformer model (at the time), with emotion detection models.
 
 In particular this project looked at combining deepMoji, an emotion deteciton model that associates text input with 64 different emojis.
 
+Emojis are a unique tool of the digital world to convey emotion. 
+This was the inital spark that made me think about incorporating something like deepMoji in as my emotion detector.
+
+Emojis  convey much more nuance than one may initially think. 
+Think about how a skull emoji may be used to convey laughter, as in 'dying laughing', to more its obvious connotations with death.
+The success of deepMoji on it's own s justifies this. 
+The model has being incredibly succesfull at detecing nuanced features like sarcasm.
 
 
-Emojis are a unique tool of the digital world to convey emotion. This was the inital spark that made me think about incorporating something like deepMoji in as my emotion detector.
+Ultimately, the project aimed to see if this could be used to bolster large transformer models like Bert. 
+While there was some promising results, the findings were inconclusive and much larger datasets would be needed to make any proper claims.
 
-Emojis are often used to convey muhc more nuance than one may initially think. Think about how a skull emoji may be used to convey laughter, as in 'dying laughing', to more obvious connotations with death.
-The success of deepMoji on it's own goes some way towards justifying this. The model has being incredibly succesfull at detecing nuanced emotions like sarcasm.
-
-
-Ultimately the project aimed to see if this could be used to bolster large transformer models like Bert. While there was some potentially promising results, the findings were inconclusive and much larger datasets would be needed to make any proper claims.
-
-The success of deepMoji on its own at detecting fake news is certianly interesting as a side note. An indication of the unique emotional watermark that seems to cover much fake news on the internet!
+The success of deepMoji on its own at detecting fake news is certianly interesting as a side note. 
+An indication of the unique emotional watermark that seems to cover much fake news on the internet!
 
 ### Conclusions
 
-Alas while there was some potentially promising results, there was not enough to achieve statistical significance! The project used bootstrapping to measure this statistical significance. 
+Alas! While there was some potentially promising results, there was not enough to achieve statistical significance. The project used bootstrapping to measure this statistical significance. 
 
 To investigate whether deepMoji really can improve Bert beyond all reasonable doubt, much larger datasets would be needed.
