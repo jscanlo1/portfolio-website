@@ -14,7 +14,7 @@ import * as Tone from 'tone';
 
 
 export default function Synth(){
-    const [wave, setWave] = useState(null);
+    const [wave, setWave] = useState('square');
     const [attack, setAttack] = useState(0);
     const [decay, setDecay] = useState(0);
     const [sustain, setSustain] = useState(0);
@@ -26,7 +26,7 @@ export default function Synth(){
     useEffect(() => {
         synth.current = new Tone.Synth({
             oscillator: {
-                type: "sawtooth",
+                type: wave,
                 // modulationFrequency: 0.2
             },
             envelope : {
@@ -36,7 +36,7 @@ export default function Synth(){
                 release : release
                 }
         }).toDestination();
-    }, [attack, decay, sustain, release]);
+    }, [wave,attack, decay, sustain, release]);
 
 
     const playSynth = () => {
@@ -55,7 +55,7 @@ export default function Synth(){
         <SynthControlPanel>
             <WaveControls wave={wave} >
                 <WaveButton curr={wave} form='square' handleOnClick={() => {setWave('square')}}/>
-                <WaveButton curr={wave} form='sine' handleOnClick={() => {setWave('sine')}}/>
+                <WaveButton curr={wave} form='sawtooth' handleOnClick={() => {setWave('sawtooth')}}/>
                 <WaveButton curr={wave} form='triangle' handleOnClick={ () => {setWave('triangle')}}/>
             </WaveControls>
 
