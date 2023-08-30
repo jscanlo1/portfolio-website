@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import EnvelopeControls from "@/components/synth/EnvelopeControls/EnvelopeControls";
 import { Knob } from "@/components/synth/Knob";
 import dynamic from 'next/dynamic';
-//import {synth, start } from '@/lib/ToneSynth';
 import * as Tone from 'tone';
+import KeyBoard from "@/components/synth/KeyBoard/KeyBoard";
 
 
 
@@ -72,6 +72,14 @@ export default function Synth(){
         <button onClick={startSynth} >Turn Synth On</button>
         <button onClick={playSynth}>CLICK ME TO PLAY</button>
 
+        
+
         </>
     );
 }
+
+/*
+<div className="mx-auto m-4 w-2/3">
+            <KeyBoard />
+        </div>
+*/
