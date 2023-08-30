@@ -56,8 +56,8 @@ export default function NavBar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          isActive ? 'bg-zinc-900 text-white' : 'text-zinc-950 hover:bg-zinc-600 hover:text-white hover:drop-shadow-lg hover:translate-x-[-2px]  hover:translate-y-[-2px] hover:border-r-2 hover:border-b-2 hover:mt-0 hover:ml-[12px] hover:mr-[4px] border-zinc-900',
-                          'rounded-md px-3 py-2 text-sm mt-[2px] ml-[18px] font-medium'
+                          isActive ? 'bg-zinc-900 text-white' : 'text-zinc-950 hover:bg-zinc-600 hover:text-white hover:drop-shadow-lg  hover:border-r-2 hover:border-b-2 hover:mb-0 hover:ml-[12px] hover:mr-[4px] border-zinc-900',
+                          'rounded-md px-3 py-2 text-sm mb-[2px] ml-[18px] font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                         
