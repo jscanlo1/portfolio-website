@@ -5,12 +5,11 @@ import WaveButton from "@/components/synth/WaveButton/WaveButton"
 import { useEffect, useRef, useState } from "react";
 import EnvelopeControls from "@/components/synth/EnvelopeControls/EnvelopeControls";
 import { Knob } from "@/components/synth/Knob";
-import dynamic from 'next/dynamic';
 import * as Tone from 'tone';
 import KeyBoard from "@/components/synth/KeyBoard/KeyBoard";
-
-
-
+import KeyBoardNote from "@/components/synth/KeyBoard/KeyBoardNote/KeyBoardNote";
+import WhiteNote from "@/components/synth/KeyBoard/KeyBoardNote/WhiteNote";
+import BlackNote from "@/components/synth/KeyBoard/KeyBoardNote/BlackNote";
 
 
 export default function Synth(){
@@ -40,8 +39,16 @@ export default function Synth(){
 
 
     const playSynth = () => {
+        Tone.start();
         synth.current.triggerAttackRelease("C3", "8n"); 
     };
+
+    function onPlay (note){
+        const now = Tone.now()
+        Tone.start();
+        console.log("Playing: " + note)
+        synth.current.triggerAttackRelease(note, "8n", now); 
+    }
 
     function startSynth() {
         Tone.start();
@@ -69,8 +76,37 @@ export default function Synth(){
             </EnvelopeControls>
         </SynthControlPanel>
 
-        <button onClick={startSynth} >Turn Synth On</button>
-        <button onClick={playSynth}>CLICK ME TO PLAY</button>
+
+        <div className="w-2/3 lg:w-1/2 mx-auto my-4">
+            <KeyBoard>
+            <KeyBoardNote>
+                <WhiteNote note="C"  onClick={() => onPlay('D4')}/>
+                <BlackNote note="C#" onClick={() => onPlay('D4')}/>
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="D" onClick={() => onPlay('D4')} />
+                <BlackNote note="D#" onClick={() => onPlay('D#4')} />
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="E" onClick={() => onPlay('E4')} />
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="F" onClick={() => onPlay('F4')} />
+                <BlackNote note="F#" onClick={() => onPlay('F#4')} />
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="G" onClick={() => onPlay('G4')} />
+                <BlackNote note="G#" onClick={() => onPlay('G#4')} />
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="A" onClick={() => onPlay('A4')} />
+                <BlackNote note="A#" onClick={() => onPlay('A#4')} />
+            </KeyBoardNote>
+            <KeyBoardNote>
+                <WhiteNote note="B" onClick={() => onPlay('B4')} />
+            </KeyBoardNote>
+            </KeyBoard>
+        </div>
 
         
 
