@@ -42,7 +42,7 @@ function ProjectPostContent({id, title, date, github, description}){
             
             <p className="text-xl pb-8">{description}</p>
 
-            <Link target='_blank' href={github} className='block text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md  pb-8 text-md font-medium' >
+            <Link target='_blank' href={github} className='inline-block text-zinc-950 hover:bg-zinc-700 hover:text-white rounded-md p-2 mb-8 text-md font-medium' >
                 <FaGithub className='inline-block mb-1'/> <strong>GitHub </strong>
             </Link>
 
