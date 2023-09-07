@@ -43,7 +43,7 @@ export default function aboutMe() {
                 <section className='pb-8 mb-8 border-b-2 border-dotted border-zinc-400'>
                     <p className='my-4 text-xl'>
                         I graduated with a Master's degree in Computer Engineering from Trinity College Dublin. 
-                        I maintained a first class honours across all five years of the programme and was awarded my degree with <strong>distinction</strong>.
+                        I maintained a First Class Honours across all five years of the programme and was awarded my degree with <strong>distinction</strong>.
                     </p>
 
                     <p className='my-4 text-xl'>

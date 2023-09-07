@@ -20,7 +20,9 @@ I built the website with **React.js** using **Next.js**. I used **Tailwind** to 
 
 
 
-### 
+### My Synth
+
+Audio engineering has always been a bit of an intrest of mine. The synth was a result of some messing around with the Web AUdio API and tones.js. Please feel free to have a go!
 
 
 ### Inspiration

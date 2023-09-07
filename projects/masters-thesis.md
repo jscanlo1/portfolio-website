@@ -1,7 +1,7 @@
 ---
 title: 'Detecting Fake News by Leveraging Emotion'
 date: '2022-04-01'
-description: 'This was my Masters thesis project. It looks at using emotion detection models alongside more general state-of-the-art transformer models to try and improve the fake news detection.'
+description: "This was my Master's thesis project. It looks at using emotion detection models alongside more general state-of-the-art transformer models to try and improve the fake news detection."
 github: 'https://github.com/jscanlo1/MAI-thesis-project'
 favourite: true
 ---

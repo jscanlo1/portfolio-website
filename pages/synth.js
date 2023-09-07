@@ -10,6 +10,7 @@ import KeyBoard from "@/components/synth/KeyBoard/KeyBoard";
 import KeyBoardNote from "@/components/synth/KeyBoard/KeyBoardNote/KeyBoardNote";
 import WhiteNote from "@/components/synth/KeyBoard/KeyBoardNote/WhiteNote";
 import BlackNote from "@/components/synth/KeyBoard/KeyBoardNote/BlackNote";
+import SubHeading from "@/components/sub-heading";
 
 
 export default function Synth(){
@@ -57,6 +58,7 @@ export default function Synth(){
     return(
         <>
         <PageTitle >My Synth</PageTitle>
+        <SubHeading>Built using tones.js and the Web Audio API</SubHeading>
 
         <div className="inline-block w-min mx-auto">
 
