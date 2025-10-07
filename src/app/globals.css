@@ -8,8 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+}
+
+
+@theme {
+  --color-parchment-light: #fdf6ec; 
+  --color-parchment-warm: #1c1c1c; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +28,142 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* --- Markdown / Prose styling --- */
+.prose {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #1a1a1a;
+  max-width: 65ch;
+}
+
+.prose h1 {
+  font-family: 'Spectral', serif;
+  color: #4A1D12;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 2rem; /* base size */
+}
+
+@media (min-width: 768px) {
+  .prose h1 {
+    font-size: 3rem; /* md+ screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose h1 {
+    font-size: 3.5rem; /* lg+ screens */
+  }
+}
+
+.prose h2 {
+  font-family: 'Spectral', serif;
+  color: #4A1D12;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .prose h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Similarly for h3 / h4 if needed */
+.prose h3 {
+  font-family: 'Spectral', serif;
+  color: #4A1D12;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .prose h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose h3 {
+    font-size: 1.75rem;
+  }
+}
+
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose a {
+  color: #4A1D12;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #5b2a18;
+}
+
+.prose blockquote {
+  font-style: italic;
+  border-left: 4px solid #d6c9b6;
+  padding-left: 1em;
+  color: #555;
+  margin: 1em 0;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  background-color: #f9f4ec;
+  color: #4A1D12;
+  border-radius: 0.25rem;
+  padding: 0.2em 0.4em;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background-color: #f9f4ec;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875em;
+}
+
+.prose hr {
+  border-color: #d6c9b6;
+  border-style: dashed;
+  margin: 2em 0;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1em;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #d6c9b6;
+  padding: 0.5rem 1rem;
 }
