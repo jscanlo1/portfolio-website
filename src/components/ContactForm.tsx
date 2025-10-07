@@ -10,6 +10,12 @@ export default function ContactForm() {
     });
     const [submitting, setSubmitting] = useState(false);
 
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitting(true);
@@ -39,19 +45,30 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="w-full mx-auto p-8 space-y-6  bg-transparent"
+            className="w-full mx-auto p-8 space-y-6 bg-transparent"
         >
             <input
                 type="text"
+                name="name"                    // <-- add name
+                value={formData.name}          // <-- bind to state
+                onChange={handleChange}        // <-- call handler
                 placeholder="Your name"
                 className="w-full px-4 py-2 rounded-md border border-[#8C3B2A] focus:ring-2 focus:ring-[#4A1D12] bg-white/80"
             />
+
             <input
                 type="email"
+                name="email"                   // <-- add name
+                value={formData.email}         // <-- bind to state
+                onChange={handleChange}        // <-- call handler
                 placeholder="Your email"
                 className="w-full px-4 py-2 rounded-md border border-[#8C3B2A] focus:ring-2 focus:ring-[#4A1D12] bg-white/80"
             />
+
             <textarea
+                name="message"                 // <-- add name
+                value={formData.message}       // <-- bind to state
+                onChange={handleChange}        // <-- call handler
                 placeholder="Your message"
                 rows={5}
                 className="w-full px-4 py-2 rounded-md border border-[#8C3B2A] focus:ring-2 focus:ring-[#4A1D12] bg-white/80"
@@ -60,7 +77,7 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={submitting}
-                className="w-full px-6 py-3 bg-[#4A1D12] text-white rounded-lg font-medium hover:bg-[#61261A] transitiondisabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
+                className="w-full px-6 py-3 bg-[#4A1D12] text-white rounded-lg font-medium hover:bg-[#61261A] transition disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed shadow-sm"
             >
                 {submitting ? 'Sending...' : 'Send Message'}
             </button>
