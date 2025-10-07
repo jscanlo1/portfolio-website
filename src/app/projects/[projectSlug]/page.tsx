@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 type ProjectMetadata = {
     title: string;
