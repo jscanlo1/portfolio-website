@@ -13,7 +13,7 @@ type BlogMetadata = {
   date?: string;
 };
 
-export default function BlogPage() {
+export default function BlogsPage() {
   const projects = getBlogs();
 
   return (
