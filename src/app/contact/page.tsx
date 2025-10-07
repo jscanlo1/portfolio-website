@@ -14,13 +14,16 @@ export default function ContactPage() {
         <p className="text-gray-700 text-lg">
           I’d love to hear from you — whether you’re interested in a project,
           collaboration, or just want to chat about machine learning and NLP.
-          You can reach me directly at{" "}
+          
+          {/*You can reach me directly at{" "}
           <a
             href="mailto:johnnyscanlon22@gmail.com"
             className="text-[#4A1D12] font-medium hover:underline"
           >
             johnnyscanlon22@gmail.com
+            
           </a>.
+          */}
         </p>
 
 
