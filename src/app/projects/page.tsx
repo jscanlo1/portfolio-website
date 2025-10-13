@@ -1,0 +1,102 @@
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
+import Typewriter from '@/components/Typewriter';
+
+type ProjectMetadata = {
+  title: string;
+  slug: string;
+  description?: string;
+  github?: string;
+  date?: string;
+};
+
+export default function ProjectsPage() {
+  const projects = getProjects();
+
+  return (
+    <main className="min-h-screen flex bg-parchment-light bg-[url('/noise.png')]">
+      {/* Left fixed panel */}
+      <aside className="hidden md:flex md:w-1/3 lg:w-1/4 fixed left-0 top-0 bottom-0 flex-col justify-center p-12 bg-parchment-light/90 backdrop-blur-sm border-r border-[#e5d9c5] shadow-md">
+        <h1 className="text-5xl font-title text-[#4A1D12] mb-4">
+          <Typewriter text='Projects' />
+        </h1>
+        <p className="text-gray-700 font-sans leading-relaxed">
+          A collection of my recent work — exploring NLP, data-driven
+          systems, and intelligent interfaces. Each project blends
+          experimentation, design, and machine learning in its own way.
+        </p>
+      </aside>
+
+      {/* Right scrollable panel */}
+      <section className="w-full md:ml-[33%] lg:ml-[25%] px-6 md:px-12 py-20 md:py-24 overflow-y-auto">
+        <div className="max-w-4xl divide-y divide-dashed divide-[#d5c9b6]">
+          {projects.map((project) => (
+            <div key={project.slug} className="py-8 first:pt-0 last:pb-0">
+              <div className="group block">
+                <Link href={`/projects/${project.slug}`}>
+                  <h2 className="text-2xl md:text-3xl font-title text-[#4A1D12] mb-2 group-hover:underline">
+                    {project.title}
+                  </h2>
+
+                  {project.date && (
+                    <p className="text-sm text-gray-500 mb-3">{project.date}</p>
+                  )}
+
+                  {project.description && (
+                    <p className="text-gray-700 font-sans">
+                      {project.description}
+                    </p>
+                  )}
+                </Link>
+
+                {/*{project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-sm text-[#4A1D12] font-medium hover:text-[#5b2a18] transition"
+                  >
+                    View on GitHub →
+                  </a>
+                )}
+                  */}
+              </div>
+            </div>
+
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function getProjects(): ProjectMetadata[] {
+  const projectsDir = path.join(process.cwd(), 'projects');
+  const files = fs.readdirSync(projectsDir);
+
+  const projects = files.map((filename) => {
+    const filePath = path.join(projectsDir, filename);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const { data } = matter(fileContent);
+
+    return {
+      title: data.title,
+      slug: data.slug,
+      description: data.description,
+      github: data.github,
+      date: data.date,
+    };
+  });
+
+  // Sort descending by date (newest first)
+  projects.sort((a, b) => {
+    if (!a.date) return 1; // put projects without date at the end
+    if (!b.date) return -1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
+  return projects;
+}
+

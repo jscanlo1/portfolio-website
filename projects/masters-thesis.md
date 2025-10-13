@@ -4,6 +4,7 @@ date: '2022-04-01'
 description: "This was my Master's thesis project. It looks at using emotion detection models alongside more general state-of-the-art transformer models to try and improve the fake news detection."
 github: 'https://github.com/jscanlo1/MAI-thesis-project'
 favourite: true
+slug: 'masters-thesis'
 ---
 
 ### Overview
@@ -12,7 +13,7 @@ favourite: true
 
 ~ William Shenstone
 
-A quote made almost 200 years ago that came to be somewhat axiomatic to my Master's Thesis.
+A quote made almost 200 years ago that came to be axiomatic to my Master's Thesis.
 
 This project is the code repository behind my Master's Thesis.
 The core train of thought behind my Thesis was this:

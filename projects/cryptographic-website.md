@@ -4,6 +4,7 @@ date: '2023-06-01'
 description: "A personal project to help teach myself about the Diffie–Hellman keys and other cryptographic concepts. Based off of a project as part of Alechemy University's blockchain course."
 github: 'https://github.com/jscanlo1/cryptographic-ledger-website'
 favourite: false
+slug: 'cryptographic-website'
 ---
 
 ### Overview

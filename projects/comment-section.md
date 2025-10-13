@@ -4,6 +4,7 @@ date: '2021-11-10'
 description: 'A college project that inspired my later Masters thesis. It looks at using news item comment sections to assess the veracity of that news item.'
 github: 'https://github.com/jscanlo1'
 favourite: false
+slug: 'comment-section'
 ---
 
 ### Overview
