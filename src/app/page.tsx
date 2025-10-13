@@ -16,11 +16,11 @@ export default function Home() {
           </h1>
 
           <h2 className="text-xl md:text-2xl font-semibold text-gray-700 font-sans">
-            Software Engineer — NLP & Machine Learning
+            Software Engineer interested in NLP & Machine Learning
           </h2>
 
           <p className="text-gray-600 max-w-md font-sans">
-            I build intelligent systems that understand and generate human language, turning complex data into actionable insights and real-world solutions.
+            I'm a professional software engineer with experience in full stack applications. I’m drawn to where technology meets human experience, using language and thoughtful design to make tools that genuinely help people.
           </p>
 
           {/* CTA Buttons */}
