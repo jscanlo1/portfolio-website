@@ -20,7 +20,7 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-600 max-w-md font-sans">
-            I'm a professional software engineer with experience in full stack applications. I'm drawn to where technology meets human experience, using language and thoughtful design to make tools that genuinely help people.
+            I&apos;m a professional software engineer with experience in full stack applications. I&apos;m drawn to where technology meets human experience, using language and thoughtful design to make tools that genuinely help people.
           </p>
 
           {/* CTA Buttons */}
