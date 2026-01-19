@@ -6,7 +6,8 @@ export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        company: '',
     });
     const [submitting, setSubmitting] = useState(false);
 
@@ -31,7 +32,7 @@ export default function ContactForm() {
 
             if (res.ok) {
                 alert("Message sent!");
-                setFormData({ name: "", email: "", message: "" });
+                setFormData({ name: "", email: "", message: "", company: "" });
             } else {
                 alert(data.error || "Something went wrong.");
             }
@@ -63,6 +64,17 @@ export default function ContactForm() {
                 onChange={handleChange}        // <-- call handler
                 placeholder="Your email"
                 className="w-full px-4 py-2 rounded-md border border-[#8C3B2A] focus:ring-2 focus:ring-[#4A1D12] bg-white/80"
+            />
+
+            <input
+                type="text"
+                name="company"                   // <-- add name
+                value={formData.company}         // <-- bind to state
+                onChange={handleChange}        // <-- call handler
+                placeholder=""
+                tabIndex={-1}
+                className="w-full px-4 py-2 rounded-md border border-[#8C3B2A] focus:ring-2 focus:ring-[#4A1D12] bg-white/80 hidden"
+                autoComplete="off"
             />
 
             <textarea
