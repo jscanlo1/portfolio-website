@@ -45,6 +45,14 @@ export default function Navbar() {
                     }
                     <li>
                         <Link
+                            href="/financial-news-sentiment"
+                            className={pathname.startsWith('/poems') ? 'underline' : 'hover:underline'}
+                        >
+                            Financial News Sentiment
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             href="/projects"
                             className={pathname.startsWith('/poems') ? 'underline' : 'hover:underline'}
                         >
@@ -97,6 +105,7 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 {isOpen && (
                     <div className="absolute top-0 left-0 w-full h-screen bg-black/90 flex flex-col items-center justify-center gap-8 text-2xl md:hidden z-30 text-white">
+                        <Link href="/financial-news-sentiment" onClick={() => setIsOpen(false)}>Financial News Sentiment</Link>
                         <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
                         <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
                         <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
