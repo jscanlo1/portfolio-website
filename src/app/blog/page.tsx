@@ -3,6 +3,17 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Typewriter from '@/components/Typewriter';
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog",
+  },
+  title: "Blog",
+  description: "Blog posts by Johnny Scanlon",
+};
+
 
 
 type BlogMetadata = {
