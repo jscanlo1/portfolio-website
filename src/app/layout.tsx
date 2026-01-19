@@ -20,8 +20,12 @@ const spectral = Spectral({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://johnnyscanlon.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Portfolio",
-  description: "Johnny Scanlon's portfolio ",
+  description: "Johnny Scanlon's portfolio",
 };
 
 export default function RootLayout({

@@ -1,5 +1,16 @@
 import ContactForm from "@/components/ContactForm";
 import Typewriter from "@/components/Typewriter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
+  title: "Contact",
+  description: "Get in touch with Johnny Scanlon",
+};
+
+
 
 // app/contact/page.tsx
 export default function ContactPage() {

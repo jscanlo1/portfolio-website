@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.johnnyscanlon.com/:path*",
+      "destination": "https://johnnyscanlon.com/:path*",
+      "permanent": true
+    }
+  ]
+}

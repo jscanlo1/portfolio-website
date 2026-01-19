@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Typewriter from '@/components/Typewriter';
+import { Metadata } from 'next';
 
 type ProjectMetadata = {
   title: string;
@@ -11,6 +12,16 @@ type ProjectMetadata = {
   github?: string;
   date?: string;
 };
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/projects",
+  },
+  title: "Projects",
+  description: "Projects by Johnny Scanlon",
+};
+
+
 
 export default function ProjectsPage() {
   const projects = getProjects();
