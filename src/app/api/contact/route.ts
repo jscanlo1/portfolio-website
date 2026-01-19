@@ -2,7 +2,12 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message, company } = await req.json();
+  
+    // Honeypot check
+    if (company) {
+      return new Response(JSON.stringify({ success: true }), { status: 200 });
+    }
 
     if (!name || !email || !message) {
       return new Response(JSON.stringify({ error: "Missing fields" }), {
